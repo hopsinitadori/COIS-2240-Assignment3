@@ -31,9 +31,17 @@ public class RentalSystem {
         saveVehicle(vehicle);
     }
 
-    public void addCustomer(Customer customer) {
+    public boolean addCustomer(Customer customer) {
+        // Check for duplicate customer ID
+        if (findCustomerById(customer.getCustomerId()) != null) {
+            System.out.println("Error: Customer with ID " + customer.getCustomerId() + " already exists.");
+            return false;
+        }
+        
         customers.add(customer);
         saveCustomer(customer);
+        System.out.println("Customer added successfully.");
+        return true;
     }
 
     public void rentVehicle(Vehicle vehicle, Customer customer, LocalDate date, double amount) {

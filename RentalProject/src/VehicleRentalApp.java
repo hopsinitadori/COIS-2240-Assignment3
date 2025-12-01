@@ -74,10 +74,10 @@ public class VehicleRentalApp {
                     System.out.print("Enter name: ");
                     String cname = scanner.nextLine();
 
-                    rentalSystem.addCustomer(new Customer(cid, cname));
-                    System.out.println("Customer added successfully.");
-                    break;
-                    
+                    boolean added = rentalSystem.addCustomer(new Customer(cid, cname));
+                    if (!added) {
+                        System.out.println("Customer was not added due to duplicate ID.");
+                    }
                 case 3:
                 	rentalSystem.displayVehicles(Vehicle.VehicleStatus.Available);
 

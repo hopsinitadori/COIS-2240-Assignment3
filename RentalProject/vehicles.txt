@@ -1,1 +1,6 @@
-AB67BC,Toyota,Rav4,2025
+AAA111,Toyota,Corolla,2019
+BBB222,Honda,Civic,2021
+CCC333,Ford,2024,2024
+AAA111,Toyota,Corolla,2019
+BBB222,Honda,Civic,2021
+CCC333,Ford,Focus,2024
